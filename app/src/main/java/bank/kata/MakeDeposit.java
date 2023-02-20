@@ -6,7 +6,7 @@ public class MakeDeposit {
     public String addMoney(int amount){
         String operationResult = "";
         balance += amount;
-        operationResult = "Transacción exitosa";
+        operationResult = "Transacción exitosa. Tu balance actual es " + balance;
         return operationResult;
     }
 }
