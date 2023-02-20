@@ -18,7 +18,7 @@ public class Account {
     public double updateBalance(double amount, String action){
         double updatedBalance = balance;
 
-        switch (action) {
+        switch (action.toLowerCase()) {
             case "addition" -> updatedBalance += amount;
             case "subtraction" -> {
                 if (amount <= balance) updatedBalance -= amount;

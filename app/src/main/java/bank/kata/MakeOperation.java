@@ -4,20 +4,20 @@ public class MakeOperation {
 
     private final Account userAccount;
 
-    private String operationType;
+    private OperationType type;
 
     public MakeOperation(Account userAccount) {
         this.userAccount = userAccount;
     }
 
     public void addMoney(double amount){
-        operationType = "addition";
-        operateInUserAccount(amount, operationType);
+        type = OperationType.ADDITION;
+        operateInUserAccount(amount, type.name());
     }
 
     public void deductMoney(double amount){
-        operationType = "subtraction";
-        operateInUserAccount(amount, operationType);
+        type = OperationType.SUBTRACTION;
+        operateInUserAccount(amount, type.name());
     }
 
     private void operateInUserAccount(double amount, String operationType) {
