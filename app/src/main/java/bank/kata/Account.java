@@ -15,7 +15,6 @@ public class Account {
         this.balance = balance;
     }
 
-
     public double updateBalance(double amount, String action){
         double updatedBalance = balance;
 
