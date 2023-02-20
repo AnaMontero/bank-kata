@@ -3,9 +3,11 @@ package bank.kata;
 public class TransactionResults {
 
     protected static String checkTransactionResult(int transactionResult) {
-        String operationResult = "Transacción exitosa";
+        String operationResult = "Transacción exitosa.";
 
-        if (transactionResult == 0) operationResult = "No se ha podido realizar la transacción.";
+        if (transactionResult == 0) {
+            operationResult = "No se ha podido realizar la transacción.";
+        }
 
         return operationResult;
     }

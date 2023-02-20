@@ -4,16 +4,15 @@ public class StartApp {
 
 	public static void main(String[] args) {
 		Account userAccount = new Account();
-		MakeDeposit makeDeposit = new MakeDeposit(userAccount);
-		WithdrawalMoney withdrawalMoney = new WithdrawalMoney(userAccount);
+		MakeOperation makeOperation = new MakeOperation(userAccount);
 
-		makeDeposit.addMoney(1000);
+		makeOperation.addMoney(1000);
 		userAccount.printBalance();
 
-		makeDeposit.addMoney(2000);
+		makeOperation.addMoney(2000);
 		userAccount.printBalance();
 
-		withdrawalMoney.deductMoney(500);
+		makeOperation.deductMoney(500);
 		userAccount.printBalance();
 	}
 }

@@ -7,7 +7,7 @@ public class Account {
     public Account() {
         this.balance = 0;
     }
-    private double getBalance() {
+    protected double getBalance() {
         return balance;
     }
 
@@ -15,19 +15,19 @@ public class Account {
         this.balance = balance;
     }
 
-    public double checkBalance() {
-        return getBalance();
-    }
 
     public double updateBalance(double amount, String action){
         double updatedBalance = balance;
 
         switch (action) {
-            case "suma" -> updatedBalance += amount;
-            case "resta" -> updatedBalance -= amount;
+            case "addition" -> updatedBalance += amount;
+            case "subtraction" -> {
+                if (amount <= balance) updatedBalance -= amount;
+            }
         }
 
         setBalance(updatedBalance);
+
         return updatedBalance;
     }
 
