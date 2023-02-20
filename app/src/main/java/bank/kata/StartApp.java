@@ -3,13 +3,13 @@ package bank.kata;
 public class StartApp {
 
 	public static void main(String[] args) {
-		MakeDeposit makeDeposit = new MakeDeposit();
+		Account userAccount = new Account();
+		MakeDeposit makeDeposit = new MakeDeposit(userAccount);
 
+		makeDeposit.addMoney(20);
+		userAccount.printBalance();
 
-		var result1 = makeDeposit.addMoney(20);
-		var result2 = makeDeposit.addMoney(50);
-
-		System.out.println(result1);
-		System.out.println(result2);
+		makeDeposit.addMoney(50);
+		userAccount.printBalance();
 	}
 }
