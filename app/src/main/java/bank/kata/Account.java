@@ -19,8 +19,8 @@ public class Account {
         double updatedBalance = balance;
 
         switch (action.toLowerCase()) {
-            case "addition" -> updatedBalance += amount;
-            case "subtraction" -> {
+            case "credit" -> updatedBalance += amount;
+            case "debit" -> {
                 if (amount <= balance) updatedBalance -= amount;
             }
         }

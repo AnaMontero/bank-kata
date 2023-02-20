@@ -11,12 +11,12 @@ public class MakeOperation {
     }
 
     public void addMoney(double amount){
-        type = OperationType.ADDITION;
+        type = OperationType.CREDIT;
         operateInUserAccount(amount, type.name());
     }
 
     public void deductMoney(double amount){
-        type = OperationType.SUBTRACTION;
+        type = OperationType.DEBIT;
         operateInUserAccount(amount, type.name());
     }
 
